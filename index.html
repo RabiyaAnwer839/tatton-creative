@@ -1,30 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tatton creative landing page</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <title>Tatton Studios & Locations</title>
 </head>
 <body>
-    <nav>
-    <ul class="nav-links">
-     <li> <img class="logo" src="assets/Mask group (3).png" alt="logo"></li>
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#">Production Hub</a></li>
-      <li><a href="#">Locations</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Case Studies</a></li>
-      <li><a href="#">Enquiry</a></li>
-      <li><button class="btn-contact">Contact Us</button></li>
-    </ul>
-    </nav>
+   <nav class="scrolled">
+  <img class="logo" src="assets/Mask group (3).png" alt="logo">
+  
+  <ul class="nav-links">
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">Production Hub</a></li>
+    <li><a href="#">Locations</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Case Studies</a></li>
+    <li><a href="#">Enquiry</a></li>
+  </ul>
+
+  <button class="btn-contact">Contact Us</button>
+  
+  <button id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
 
 <section class="hero">
     <div class="hero-left">
-      <h1>A Production<br>Campus Built<br>for Scale</h1>
-      <p>Studio space, backlot, and filming locations <br> designed for high-volume production, logistics,<br> and long-term use.</p>
+      <h1>A Production Campus Built for Scale</h1>
+      <p>Studio space, backlot, and filming locations designed for high-volume production, logistics,and long-term use.</p>
       <div class="hero-actions">
         <button class="btn-primary">Explore Production Hub</button>
         <button class="btn-secondary">Search Locations</button>
@@ -137,12 +143,13 @@
     </div>
  
   </section>
-  
-<button class="btn-2">Filming locations</button>
+  <div class="gallery-header">
+<button id="film-btn">Filming locations</button>
 <h2 class="gallery-heading">From landscape to architectural settings,<br> available for filming and long-term use.</h2>
+</div>
 
 <section class="gallery-cards">
-
+  
 <div class="image-card">
   <img src="assets/0d3e2b924e6533bf86289fe50b0cee5bab95846d.jpg" alt="">
 <h5>Parkland & Landscapes</h5>
@@ -173,7 +180,7 @@
 
 <div class="image-card">
   <img src="assets/3cb007074aa89aaa7ec8ee0caddbf379489b1821.jpg" alt="photo">
-<h5>Production Spaces</h5>
+<h5>Industrial & Commercial</h5>
 <p>Direct transport links, controlled entry points, and infrastructure designed for efficient movement.</p>
 </div>
 </section>
@@ -233,11 +240,6 @@
  
   </section>
 
-
-
-
-
-
 <div class="trust-section">
     <div class="shield-icon"><img src="assets/protection 1.png" alt=""></div>
     <div class="trust-title">Backed by the Tatton Estate</div>
@@ -262,13 +264,12 @@
        SECTION 2 — RECENT PRODUCTIONS
   ═══════════════════════════════ -->
   <div class="productions-section">
- 
     <div class="section-badge">
       <span>Recent Productions</span>
     </div>
  
     <h2 class="section-heading">
-      Examples of production activity across the estate,<br> demonstrating flexibility, scale, and capability.
+      Examples of production activity across the estate,demonstrating flexibility, scale, and capability.
     </h2>
  
     <div class="cards-grid">
@@ -333,10 +334,12 @@
       <div class="form-group">
         <label for="name">Full Name</label>
         <input type="text" id="name" placeholder="Lucas Williams"/>
+        <p class="error"  id="name-error"></p>
       </div>
       <div class="form-group">
         <label for="email">Email</label>
         <input type="email" id="email" placeholder="you@example.com"/>
+        <p class="error"   id="email-error"></p>
       </div>
      </div>
       <div class="form-group full">
@@ -347,6 +350,7 @@
       <div class="form-group-2 full">
         <label  for="brief">Project Brief</label>
         <textarea id="brief" placeholder="Write here..."></textarea>
+        <p class="error" id="brief-error"></p>
       </div>
     </div>
  
@@ -422,5 +426,6 @@
   </div>
 </footer>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
